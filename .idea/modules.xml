@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Java/Banco/Banco.iml" filepath="$PROJECT_DIR$/Java/Banco/Banco.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Java/Classe pessoa/Classe pessoa.iml" filepath="$PROJECT_DIR$/Java/Classe pessoa/Classe pessoa.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Java/JogoDeAdivinhacao/JogoDeAdivinhacao.iml" filepath="$PROJECT_DIR$/Java/JogoDeAdivinhacao/JogoDeAdivinhacao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/alura.iml" filepath="$PROJECT_DIR$/.idea/alura.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Java/screenmatch/screenmatch.iml" filepath="$PROJECT_DIR$/Java/screenmatch/screenmatch.iml" />
+    </modules>
+  </component>
+</project>
