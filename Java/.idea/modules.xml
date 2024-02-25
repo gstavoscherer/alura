@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Aluno/Aluno.iml" filepath="$PROJECT_DIR$/Aluno/Aluno.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Banco/Banco.iml" filepath="$PROJECT_DIR$/Banco/Banco.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Classe pessoa/Classe pessoa.iml" filepath="$PROJECT_DIR$/Classe pessoa/Classe pessoa.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Java.iml" filepath="$PROJECT_DIR$/.idea/Java.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JogoDeAdivinhacao/JogoDeAdivinhacao.iml" filepath="$PROJECT_DIR$/JogoDeAdivinhacao/JogoDeAdivinhacao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/screenmatch/screenmatch.iml" filepath="$PROJECT_DIR$/screenmatch/screenmatch.iml" />
+    </modules>
+  </component>
+</project>

@@ -4,33 +4,32 @@ import br.com.alura.screenmatch.modelos.Serie;
 
 public class Principal {
     public static void main(String[] args) {
-        Filme meuFilme = new Filme();
-        meuFilme.setNome("Meu Malvado Favorito 4");
-        meuFilme.setAnoDeLancamento(2024);
-        meuFilme.setDuracao(180);
-        meuFilme.avalia(8);
-        meuFilme.avalia(6);
-        meuFilme.avalia(10);
-        meuFilme.exibeFichaTecnica();
+        Filme favorito = new Filme();
+        favorito.setNome("The Matrix");
+        favorito.setAnoDeLancamento(1999);
+        favorito.setDuracao(135);
+        favorito.setIncluidoNoPlano(true);
 
-        Filme meuFilme2 = new Filme();
-        meuFilme2.setDuracao(200);
-        meuFilme2.setNome("Avatar");
-        meuFilme2.setAnoDeLancamento(2023);
+        Filme outro = new Filme();
+        outro.setNome("John Wick");
+        outro.setAnoDeLancamento(2014);
+        outro.setDuracao(101);
+        outro.setIncluidoNoPlano(true);
 
-        Serie lost = new Serie();
-        lost.setNome("Lost");
-        lost.setAnoDeLancamento(2000);
-        lost.setTemporadas(10);
-        lost.setEpisodiosPorTemporada(10);
-        lost.setMinutosPorEpisodio(50);
-        lost.exibeFichaTecnica();
+        Serie serie = new Serie();
+        serie.setNome("La Casa de Papel");
+        serie.setAnoDeLancamento(2017);
+        serie.setIncluidoNoPlano(true);
+        serie.setAtiva(true);
+        serie.setTemporadas(5);
+        serie.setEpisodiosPorTemporada(10);
+        serie.setMinutosPorEpisodio(45);
 
         CalculadoraDeTempo calculadora = new CalculadoraDeTempo();
-        calculadora.inclui(meuFilme);
-        calculadora.inclui(meuFilme2);
-        calculadora.inclui(lost);
-        System.out.println(calculadora.getTempoTotal());
+        calculadora.inclui(favorito);
+        calculadora.inclui(outro);
+        calculadora.inclui(serie);
 
+        System.out.println("Tempo total: " + calculadora.getTempoTotal());
     }
 }
