@@ -55,8 +55,9 @@ public class Titulo {
     public int getTotalDeAvaliacoes() {
         return totalDeAvaliacoes;
     }
-
-
+    public double pegaMedia(){
+        return somaDasAvaliacoes / totalDeAvaliacoes;
+    }
     public void avalia(double nota) {
         somaDasAvaliacoes += nota;
         totalDeAvaliacoes++;
