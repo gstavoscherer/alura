@@ -57,7 +57,7 @@ public class Main {
                      System.out.println("Encerrando aplicação");
                  break;
                  default:
-                     System.out.println("Opção inválida");
+                     System.out.println("Opção inválida!");
                  break;
              }
 
