@@ -4,6 +4,8 @@ import br.com.alura.screenmatch.modelos.Episodio;
 import br.com.alura.screenmatch.modelos.Filme;
 import br.com.alura.screenmatch.modelos.Serie;
 
+import java.util.ArrayList;
+
 public class Principal {
     public static void main(String[] args) {
         Filme favorito = new Filme();
@@ -49,5 +51,12 @@ public class Principal {
         episodio.setSerie(serie);
         episodio.setTotalDeVisualizacoes(50);
         filtro.filtra(episodio);
+
+        ArrayList<Filme> lista = new ArrayList<>();
+        lista.add(favorito);
+        lista.add(outro);
+        System.out.println("Tamanho da lista: " + lista.size());
+        System.out.println("Primeiro filme: " + lista.get(0).getNome());
+        System.out.println(lista);
     }
 }
