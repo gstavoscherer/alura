@@ -8,16 +8,14 @@ import java.util.ArrayList;
 
 public class Principal {
     public static void main(String[] args) {
-        Filme favorito = new Filme();
-        favorito.setNome("The Matrix");
+        Filme favorito = new Filme("Matrix");
         favorito.setAnoDeLancamento(1999);
         favorito.setDuracao(135);
         favorito.setIncluidoNoPlano(true);
         favorito.avalia(8);
         favorito.avalia(10);
 
-        Filme outro = new Filme();
-        outro.setNome("John Wick");
+        Filme outro = new Filme("John Wick");
         outro.setAnoDeLancamento(2014);
         outro.setDuracao(101);
         outro.setIncluidoNoPlano(true);
