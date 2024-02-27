@@ -8,24 +8,20 @@ import java.util.ArrayList;
 
 public class Principal {
     public static void main(String[] args) {
-        Filme favorito = new Filme("Matrix");
-        favorito.setAnoDeLancamento(1999);
+        Filme favorito = new Filme("Matrix", 1999);
         favorito.setDuracao(135);
         favorito.setIncluidoNoPlano(true);
         favorito.avalia(8);
         favorito.avalia(10);
 
-        Filme outro = new Filme("John Wick");
-        outro.setAnoDeLancamento(2014);
+        Filme outro = new Filme("John Wick", 2014);
         outro.setDuracao(101);
         outro.setIncluidoNoPlano(true);
         outro.avalia(2);
         outro.avalia(5);
         outro.avalia(1);
 
-        Serie serie = new Serie();
-        serie.setNome("La Casa de Papel");
-        serie.setAnoDeLancamento(2017);
+        Serie serie = new Serie("La Casa de Papel", 2017);
         serie.setIncluidoNoPlano(true);
         serie.setAtiva(true);
         serie.setTemporadas(5);
@@ -56,5 +52,7 @@ public class Principal {
         System.out.println("Tamanho da lista: " + lista.size());
         System.out.println("Primeiro filme: " + lista.get(0).getNome());
         System.out.println(lista);
+
+
     }
 }

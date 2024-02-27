@@ -16,6 +16,11 @@ public class Titulo {
         return duracao;
     }
 
+    public Titulo(String nome, int anoDeLancamento) {
+        this.nome = nome;
+        this.anoDeLancamento = anoDeLancamento;
+    }
+
     public void setDuracao(int duracao) {
         this.duracao = duracao;
     }
