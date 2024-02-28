@@ -4,6 +4,7 @@ import br.com.alura.screenmatch.modelos.Titulo;
 
 import java.sql.Array;
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class PrincipalComListas {
     public static void main(String[] args) {
@@ -28,6 +29,14 @@ public class PrincipalComListas {
 
         }
         ArrayList<String> buscaPorArtista = new ArrayList<>();
-        
+        buscaPorArtista.add("Adam Sandler");
+        buscaPorArtista.add("Paulo");
+        buscaPorArtista.add("Bruna");
+        System.out.println(buscaPorArtista);
+
+        Collections.sort(buscaPorArtista);
+        System.out.println(buscaPorArtista);
+
+        Collections.sort(lista.get(filme1).getNome());
+
     }
-}
