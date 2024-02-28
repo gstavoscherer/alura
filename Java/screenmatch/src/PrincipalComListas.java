@@ -5,6 +5,7 @@ import br.com.alura.screenmatch.modelos.Titulo;
 import java.sql.Array;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 
 public class PrincipalComListas {
     public static void main(String[] args) {
@@ -22,9 +23,9 @@ public class PrincipalComListas {
         lista.add(filme1);
         lista.add(serie);
         System.out.println("Tamanho da lista: " + lista.size());
-        for (Titulo item: lista){
-            if(item instanceof Filme filme && filme.getClassificacao() > 2 ) {
-                System.out.println("Nome do filme: "+ filme.getNome() + " e classificação do filme: "+filme.getClassificacao());
+        for (Titulo item : lista) {
+            if (item instanceof Filme filme && filme.getClassificacao() > 2) {
+                System.out.println("Nome do filme: " + filme.getNome() + " e classificação do filme: " + filme.getClassificacao());
             }
 
         }
@@ -37,6 +38,11 @@ public class PrincipalComListas {
         Collections.sort(buscaPorArtista);
         System.out.println(buscaPorArtista);
 
-        Collections.sort(lista.get(filme1).getNome());
+        Collections.sort(lista);
+        System.out.println(lista);
 
+        lista.sort(Comparator.comparing(Titulo::getAnoDeLancamento));
+        System.out.println(lista);
+
+        }
     }
