@@ -43,23 +43,24 @@ public class Main {
 
                     boolean clienteEncontrado = false;
 
-                    for (int i = 0; i < listadeclientes.size(); i++) {
-
-                        if (listadeclientes.get(i).getId() == choice02) {
+                    for (Conta conta : listadeclientes) {
+                        if (conta.getId() == choice02) {
                             System.out.println("-------------------------------");
-                            System.out.println("ID: " + listadeclientes.get(i).getId());
-                            System.out.println("Nome do cliente: " + listadeclientes.get(i).getNome());
-                            System.out.println("Saldo: R$" + listadeclientes.get(i).getSaldo());
-                            System.out.println("Tipo de conta: " + listadeclientes.get(i).getTipoDeConta());
+                            System.out.println("ID: " + conta.getId());
+                            System.out.println("Nome do cliente: " + conta.getNome());
+                            System.out.println("Saldo: R$" + String.format("%.2f", conta.getSaldo())); // Formatando saldo com duas casas decimais
+                            System.out.println("Tipo de conta: " + conta.getTipoDeConta());
                             System.out.println("-------------------------------");
                             clienteEncontrado = true;
                             break;
                         }
                     }
+
                     if (!clienteEncontrado) {
                         System.out.println("ID inválido. Por favor, digite um ID válido.");
                     }
                     break;
+
                 case 3:
                     System.out.println("Escolha o ID do cliente desejado:");
                     int choice03 = scanner.nextInt();

@@ -2,6 +2,7 @@ import br.com.alura.screenmatch.modelos.Filme;
 import br.com.alura.screenmatch.modelos.Serie;
 import br.com.alura.screenmatch.modelos.Titulo;
 
+import java.sql.Array;
 import java.util.ArrayList;
 
 public class PrincipalComListas {
@@ -26,5 +27,7 @@ public class PrincipalComListas {
             }
 
         }
+        ArrayList<String> buscaPorArtista = new ArrayList<>();
+        
     }
 }
