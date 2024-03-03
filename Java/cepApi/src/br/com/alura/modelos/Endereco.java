@@ -1,18 +1,27 @@
 package br.com.alura.modelos;
 
 public class Endereco {
-    private int cep;
+    private String cep;
     private String logradouro;
     private String bairro;
     private String cidade;
     private String uf;
     private int ddd;
 
-    public int getCep() {
+    public Endereco(EnderecoCEP enderecoCep){
+        this.cep = enderecoCep.cep();
+        this.logradouro = enderecoCep.logradouro();
+        this.bairro = enderecoCep.bairro();
+        this.cidade = enderecoCep.localidade();
+        this.uf = enderecoCep.uf();
+        this.ddd = Integer.parseInt(enderecoCep.ddd());
+    }
+
+    public String getCep() {
         return cep;
     }
 
-    public void setCep(int cep) {
+    public void setCep(String cep) {
         this.cep = cep;
     }
 
@@ -54,5 +63,17 @@ public class Endereco {
 
     public void setDdd(int ddd) {
         this.ddd = ddd;
+    }
+
+    @Override
+    public String toString() {
+        return "Endereco{" +
+                "cep=" + cep +
+                ", logradouro='" + logradouro + '\'' +
+                ", bairro='" + bairro + '\'' +
+                ", cidade='" + cidade + '\'' +
+                ", uf='" + uf + '\'' +
+                ", ddd=" + ddd +
+                '}';
     }
 }
