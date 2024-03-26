@@ -53,6 +53,8 @@ public class Principal {
                 case 3:
                     listarSeries();
                     break;
+                case 4:
+                    buscarSeriePorTitulo();
                 case 0:
                     System.out.println("Saindo...");
                     break;
@@ -119,6 +121,16 @@ public class Principal {
         series.stream()
                 .sorted(Comparator.comparing(Serie::getGenero))
                 .forEach(System.out::println);
+    }
+    private void buscarSeriePorTitulo() {
+        System.out.println("Digite o nome da série para busca");
+        var nomeSerie = leitura.nextLine();
+        Optional<Serie> serie = repositorio.findByTituloContainingIgnoreCase(nomeSerie);
+        if(serie.isPresent()){
+            System.out.println(serie.get());
+        } else {
+            System.out.println("Série não encontrada!");
+        }
     }
 }
 
