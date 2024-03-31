@@ -40,7 +40,8 @@ public class Principal {
                     7 - Buscar séries por categoria
                     8 - Filtrar séries por temporada e avaliação        
                     9 - Filtrar Episodios por trecho   
-                    10- Top 5 Episódios de uma série                         
+                    10- Top 5 Episódios de uma série       
+                    11- Episodios a partir de uma data                  
                     0 - Sair                                 
                     """;
 
@@ -78,13 +79,16 @@ public class Principal {
                         break;
                 case 10:
                     buscarTop5EpisodiosDeUmaSerie();
+                    break;
+                case 11:
+                    buscarEpisodiosAPartirDeData();
+                    break;
                 case 0:
                     System.out.println("Saindo...");
                     break;
                 default:
                     System.out.println("Opção inválida");
-            }
-
+                }
             }
         }
 
@@ -205,6 +209,21 @@ public class Principal {
                             e.getSerie().getTitulo(), e.getTitulo(), e.getTemporada(), e.getAvaliacao()
                     ));
 
+        }
+    }
+    private void buscarEpisodiosAPartirDeData(){
+        buscarSeriePorTitulo();
+        if (serieBusca.isPresent()){
+            Serie serie = serieBusca.get();
+            System.out.println("Digite o ano limite de lançamento");
+            var anoLancamento = leitura.nextInt();
+            List<Episodio> episodiosAno = repositorio.episodiosPorSerieEAno(serie, anoLancamento);
+            episodiosAno.forEach(e -> System.out.println(
+                   "Data: "+ e.getDataLancamento() + ", Episódio: " + e.getTitulo() + ", Temporada: " + e.getTemporada() + ", Avaliação: " + e.getAvaliacao()
+            ));
+
+        } else {
+            System.out.println("Série não encontrada!");
         }
     }
 }
